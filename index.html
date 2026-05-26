@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Rey de las Piletas | General Levalle · Sur de Córdoba</title>
 <meta name="description" content="Limpieza, mantenimiento y venta de productos para piletas. General Levalle y todo el sur de Córdoba. WhatsApp: 3385686815">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --cyan: #00b4d8;
@@ -13,12 +13,10 @@
     --cyan-light: #48cae4;
     --cyan-pale: #e0f7fa;
     --blue: #0077b6;
-    --blue-dark: #005a8e;
     --white: #ffffff;
     --off-white: #f0fbff;
     --dark: #0a1628;
     --gray: #4a6278;
-    --light-gray: #cce8f4;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,8 +29,6 @@
     background: rgba(255,255,255,0.96); backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,180,216,0.15);
   }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo img { height: 52px; object-fit: contain; }
   .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
   .nav-links a { text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); transition: color 0.3s; }
   .nav-links a:hover { color: var(--cyan-dark); }
@@ -64,14 +60,9 @@
   .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
   .btn-cyan { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: var(--cyan-dark); color: white; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 50px; transition: all 0.3s; }
-  .btn-cyan:hover { background: var(--blue); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,119,182,0.4); }
+  .btn-cyan:hover { background: var(--blue); transform: translateY(-2px); }
   .btn-ghost { display: inline-block; padding: 14px 32px; border: 1px solid rgba(255,255,255,0.35); color: white; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; border-radius: 50px; transition: all 0.3s; }
   .btn-ghost:hover { background: rgba(255,255,255,0.1); }
-
-  .zona-wrap { background: var(--cyan-dark); padding: 22px 50px; }
-  .zona { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-  .zona-text { font-size: 13px; color: rgba(255,255,255,0.85); letter-spacing: 1px; font-weight: 500; }
-  .zona-text strong { color: white; }
 
   .section-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--cyan-dark); margin-bottom: 12px; font-weight: 700; }
   .section-title { font-size: clamp(18px, 2.5vw, 30px); font-weight: 800; color: var(--dark); line-height: 1.1; margin-bottom: 14px; text-transform: uppercase; letter-spacing: -0.5px; }
@@ -87,7 +78,7 @@
   .servicios { max-width: 1080px; margin: 0 auto; }
   .servicios-header { text-align: center; margin-bottom: 46px; }
   .servicios-header .section-divider { margin: 0 auto; }
-  .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; justify-items: center; }
+  .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .servicio-card { background: white; border-radius: 16px; padding: 30px 24px; text-align: center; transition: all 0.3s; border: 1px solid rgba(0,180,216,0.15); box-shadow: 0 2px 12px rgba(0,119,182,0.06); }
   .servicio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,119,182,0.15); border-color: var(--cyan-light); }
   .servicio-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--cyan-pale); border: 2px solid rgba(0,180,216,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
@@ -110,33 +101,30 @@
   .contacto-item { padding: 18px 0; border-bottom: 1px solid rgba(0,180,216,0.2); }
   .contacto-item:last-child { border-bottom: none; }
   .contacto-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--cyan-dark); margin-bottom: 6px; font-weight: 600; }
-  .contacto-value { font-size: 18px; font-weight: 600; color: var(--dark); }
+  .contacto-value { font-size: 16px; font-weight: 600; color: var(--dark); }
   .contacto-value a { color: var(--blue); text-decoration: none; font-size: 20px; font-weight: 700; }
 
   footer { background: var(--dark); text-align: center; padding: 40px 24px; }
-  .footer-logo { margin-bottom: 16px; }
-  .footer-logo img { height: 60px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.7; }
   .footer-divider { width: 36px; height: 2px; background: rgba(0,180,216,0.3); margin: 0 auto 16px; border-radius: 2px; }
   .footer-text { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.35); }
 
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
-    .zona-wrap { padding: 16px 20px; }
     .about-wrap { padding: 50px 20px; }
     .about { grid-template-columns: 1fr; gap: 32px; }
     .about-image { height: 280px; }
     .servicios-wrap { padding: 50px 20px; }
-    .servicios-grid { grid-template-columns: 1fr; justify-items: center; }
-    .servicio-card { max-width: 100%; width: 100%; }
+    .servicios-grid { grid-template-columns: 1fr; }
     .mid-banner { padding: 50px 24px; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#inicio" class="nav-logo">
+  <a href="#inicio" style="text-decoration:none;">
     <span style="font-size:16px;font-weight:800;color:#0096c7;letter-spacing:-0.5px;">EL REY <span style="color:#0077b6">DE LAS PILETAS</span></span>
   </a>
   <ul class="nav-links">
@@ -147,11 +135,12 @@
   </ul>
 </nav>
 
+<!-- HERO — solo fondo piscina, sin logo -->
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Sur de Córdoba · General Levalle</div>
+    <div class="hero-eyebrow">General Levalle</div>
     <h1 class="hero-title">El Rey de<br><span>las Piletas</span></h1>
     <div class="hero-subtitle">Limpieza · Mantenimiento · Productos</div>
     <div class="hero-location">General Levalle y todo el sur de Córdoba</div>
@@ -166,13 +155,7 @@
   </div>
 </section>
 
-<div class="zona-wrap">
-  <div class="zona">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    <span class="zona-text" style="text-align:center;">Servicio en <strong>General Levalle</strong><br>y todo el <strong>sur de Córdoba</strong></span>
-  </div>
-</div>
-
+<!-- ABOUT -->
 <div class="about-wrap" id="nosotros">
   <div class="about">
     <div class="about-text">
@@ -189,6 +172,7 @@
   </div>
 </div>
 
+<!-- SERVICIOS -->
 <div class="servicios-wrap" id="servicios">
   <div class="servicios">
     <div class="servicios-header">
@@ -231,6 +215,7 @@
   </div>
 </div>
 
+<!-- MID BANNER -->
 <div class="mid-banner">
   <div class="mid-banner-bg"></div>
   <div class="mid-banner-overlay"></div>
@@ -246,19 +231,20 @@
   </div>
 </div>
 
+<!-- CONTACTO -->
 <div class="contacto-wrap" id="contacto">
   <div class="contacto">
     <div class="section-label">Contacto</div>
-    <h2 class="section-title" style="font-size:clamp(18px,2.5vw,26px);">Encontranos</h2>
+    <h2 class="section-title" style="font-size:clamp(16px,2vw,22px);">Encontranos</h2>
     <div class="section-divider"></div>
     <div class="contacto-items">
       <div class="contacto-item">
         <div class="contacto-label">Ubicación</div>
-        <div class="contacto-value">General Levalle, Córdoba</div>
+        <div class="contacto-value" style="font-size:15px;">General Levalle, Córdoba</div>
       </div>
       <div class="contacto-item">
         <div class="contacto-label">Zona de Cobertura</div>
-        <div class="contacto-value" style="font-size:15px; font-weight:500;">Todo el sur de Córdoba</div>
+        <div class="contacto-value" style="font-size:14px; font-weight:500;">Todo el sur de Córdoba</div>
       </div>
       <div class="contacto-item">
         <div class="contacto-label">WhatsApp</div>
@@ -268,10 +254,9 @@
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <div style="font-size:16px;font-weight:800;color:#48cae4;letter-spacing:-0.5px;margin-bottom:16px;">EL REY DE LAS PILETAS</div>
-  </div>
+  <div style="font-size:16px;font-weight:800;color:#48cae4;letter-spacing:-0.5px;margin-bottom:16px;">EL REY DE LAS PILETAS</div>
   <div class="footer-divider"></div>
   <div class="footer-text">
     General Levalle, Córdoba · Todo el sur de Córdoba · WhatsApp: 3385-686815<br>
